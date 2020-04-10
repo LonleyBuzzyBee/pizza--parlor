@@ -3,56 +3,61 @@ function getVegValues(){
     var vegTop = []; 
     vegInputs.forEach((vegInput) => {
       vegTop.push(vegInput.value);
-      console.log(vegInput);
     });
     return vegTop.map(_=>_|0).reduce((x,y) => x+y,0);  
   }
 function getMeatValues(){
-    var vegInputs = document.querySelectorAll(`input[name="vegetable"]:checked`);
-    var vegTop = []; 
-    vegInputs.forEach((vegInput) => {
-      vegTop.push(vegInput.value);
-      console.log(vegInput);
+    var meatInputs = document.querySelectorAll(`input[name="meat"]:checked`);
+    var meatTop = []; 
+    meatInputs.forEach((meatInput) => {
+      meatTop.push(meatInput.value);
     });
-    return vegTop.map(_=>_|0).reduce((x,y) => x+y,0);  
+    return meatTop.map(_=>_|0).reduce((x,y) => x+y,0);  
   }
 function getSauceValues(){
-    var vegInputs = document.querySelectorAll(`input[name="vegetable"]:checked`);
-    var vegTop = []; 
-    vegInputs.forEach((vegInput) => {
-      vegTop.push(vegInput.value);
-      console.log(vegInput);
+    var sauceInputs = document.querySelectorAll(`input[name="sauce"]:checked`);
+    var sauceTop = []; 
+    sauceInputs.forEach((sauceInput) => {
+      sauceTop.push(sauceInput.value);
     });
-    return vegTop.map(_=>_|0).reduce((x,y) => x+y,0);  
+    return sauceTop.map(_=>_|0).reduce((x,y) => x+y,0);  
   }
 function getSizeValues(){
-    var vegInputs = document.querySelectorAll(`input[name="vegetable"]:checked`);
-    var vegTop = []; 
-    vegInputs.forEach((vegInput) => {
-      vegTop.push(vegInput.value);
-      console.log(vegInput);
+    var sizeInputs = document.querySelectorAll(`input[name="size"]:checked`);
+    var sizeTop = []; 
+    sizeInputs.forEach((sizeInput) => {
+      sizeTop.push(sizeInput.value);
     });
-    return vegTop.map(_=>_|0).reduce((x,y) => x+y,0);  
+    return sizeTop.map(_=>_|0).reduce((x,y) => x+y,0);  
   }
-function getCheezeValues(){
-    var vegInputs = document.querySelectorAll(`input[name="vegetable"]:checked`);
-    var vegTop = []; 
-    vegInputs.forEach((vegInput) => {
-      vegTop.push(vegInput.value);
-      console.log(vegInput);
+function getCheeseValues(){
+    var cheeseInputs = document.querySelectorAll(`input[name="cheese"]:checked`);
+    var cheeseTop = []; 
+    cheeseInputs.forEach((cheeseInput) => {
+      cheeseTop.push(cheeseInput.value);
     });
-    return vegTop.map(_=>_|0).reduce((x,y) => x+y,0);  
+    return cheeseTop.map(_=>_|0).reduce((x,y) => x+y,0);  
   }
 function getDSauceValues(){
-    var vegInputs = document.querySelectorAll(`input[name="vegetable"]:checked`);
-    var vegTop = []; 
-    vegInputs.forEach((vegInput) => {
-      vegTop.push(vegInput.value);
-      console.log(vegInput);
+    var dSauceInputs = document.querySelectorAll(`input[name="dSauce"]:checked`);
+    var dSauceTop = []; 
+    dSauceInputs.forEach((dSauceInput) => {
+      dSauceTop.push(dSauceInput.value);
     });
-    return vegTop.map(_=>_|0).reduce((x,y) => x+y,0);  
+    return dSauceTop.map(_=>_|0).reduce((x,y) => x+y,0);  
   }
+  
+function Pizza(vTopping,mTopping,sTopping,pSize,cTopping,dSauce) {
+  this.vTopping = vTopping,
+  this.mTopping = mTopping,
+  this.sTopping = sTopping,
+  this.pSize = pSize,
+  this.cTopping = cTopping,
+  this.dSauce = dSauce,
+  this.cost = 0;
+  
 
+}
 
 
 
@@ -65,29 +70,14 @@ $(document).ready(function() {
   $("#form2").submit(function(event) {
     event.preventDefault();
     var getVegChecks = getVegValues();
-    console.log(getVegChecks);
-    
     var getMeatChecks = getMeatValues();
-   
-    console.log(getMeatChecks);
-    
-    
     var getSauceChecks = getSauceValues();
-    console.log(getSauceChecks);
-    
-    
     var getSizeChecks = getSizeValues();
-    console.log(getSizeChecks);
-    
-    
-    var getCheezeChecks = getCheezeValues();
-    console.log(getCheezeChecks);
-    
-    
+    var getCheezeChecks = getCheeseValues();
     var getDSauceChecks = getDSauceValues();
-    console.log(getDSauceChecks);
+    var pizza = new Pizza (getVegChecks,getMeatChecks,getSauceChecks,getSizeChecks,getCheezeChecks,getDSauceChecks);
 
-    
+    console.log(pizza);
 
  
 
