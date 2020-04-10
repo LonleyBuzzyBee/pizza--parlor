@@ -46,7 +46,7 @@ function getDSauceValues(){
     });
     return dSauceTop.map(_=>_|0).reduce((x,y) => x+y,0);  
   }
-  
+
 function Pizza(vTopping,mTopping,sTopping,pSize,cTopping,dSauce) {
   this.vTopping = vTopping,
   this.mTopping = mTopping,
@@ -55,8 +55,15 @@ function Pizza(vTopping,mTopping,sTopping,pSize,cTopping,dSauce) {
   this.cTopping = cTopping,
   this.dSauce = dSauce,
   this.cost = 0;
-  
+}
+Pizza.prototype.addToppings = function() {
+  var total = this.cost + this.vTopping + this.sTopping + this.pSize + this.cTopping + this.dSauce;
+  console.log(total);
+  return this.printCost(total);
+}
+Pizza.prototype.printCost = function (finalTotal) {
 
+$("#cost").html(finalTotal);
 }
 
 
@@ -77,7 +84,8 @@ $(document).ready(function() {
     var getDSauceChecks = getDSauceValues();
     var pizza = new Pizza (getVegChecks,getMeatChecks,getSauceChecks,getSizeChecks,getCheezeChecks,getDSauceChecks);
 
-    console.log(pizza);
+    pizza.addToppings();
+    
 
  
 
