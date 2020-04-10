@@ -17,14 +17,26 @@
     <form>
       <div class="form-row align-items-center">
         <div class="col-auto my-1">
-          <label class="mr-sm-2" for="inlineFormCustomSelect">Choose a type of cheese</label>
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Choose a Classic Pizza</label>
           <select class="custom-select mr-sm-2">
             <option selected> </option>
-            <option value="1">Cheddar</option>
-            <option value="2">Gouda</option>
-            <option value="3">Mozzerella</option>
-            <option value="4">Feta</option>
+            <option value="1">Hawaiian</option>
+            <option value="2">Peperoni</option>
+            <option value="3">Four Cheese</option>
+            <option value="4">Buffalo Chicken</option>
           </select>
+          </div>
+        </div>
+      </form>
+      <div class="card">
+        <div class="card-body">
+          <div class="container">
+            <h4>Customize your own pizza!</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
           <label for="vToppings">Choose vegetable toppings</label>
           <div class="form-check" class="vToppings">
             <input type="checkbox" class="form-check-input" id="check-1" value="1">
@@ -42,6 +54,9 @@
             <input type="checkbox" class="form-check-input" id="check-4" value="4">
             <label for="check-4" class="form-check-label">Spinache</label>
           </div>
+        </div>
+       
+          <div class="col-sm">
           <label for="mToppings">Choose a Meat topping</label>
           <div class="form-check" class="mToppings">
             <input type="checkbox" class="form-check-input" id="check-1" value="1">
@@ -59,6 +74,8 @@
             <input type="checkbox" class="form-check-input" id="check-4" value="4">
             <label for="check-4" class="form-check-label">Vegan Pepperoni</label>
           </div>
+        </div>
+          <div class="col-sm">
           <label for="sauce">Choose a Sauce</label>
           <div class="form-check" class="sauce">
             <input type="checkbox" class="form-check-input" id="check-1" value="1">
@@ -76,43 +93,70 @@
             <input type="checkbox" class="form-check-input" id="check-4" value="4">
             <label for="check-4" class="form-check-label">White Garlic</label>
           </div>
-          <label for="size">Choose which size</label>
-          <div class="form-check" class="size">
-            <input type="checkbox" class="form-check-input" id="check-1" value="1">
-            <label for="check-1" class="form-check-label">Small Pizza: 8-10 inches with 6 slices</label>
-          </div>
-          <div class="form-check" class="size">
-            <input type="checkbox" class="form-check-input" id="check-2" value="2">
-            <label for="check-2" class="form-check-label">Medium Pizza: 12 inches with 8 slices</label>
-          </div>
-          <div class="form-check" class="size">
-            <input type="checkbox" class="form-check-input" id="check-3" value="3">
-            <label for="check-3" class="form-check-label">Large Pizza: 14 inch with 10 slices</label>
-          </div>
-          <div class="form-check" class="size">
-            <input type="checkbox" class="form-check-input" id="check-4" value="4">
-            <label for="check-4" class="form-check-label">Extra-large Pizza: 16-18 inch with 12 slices</label>
-          </div>
-          <label for="cheese">Choose a type of Cheese</label>
-          <div class="form-check" class="cheese">
-            <input type="checkbox" class="form-check-input" id="check-1" value="1">
-            <label for="check-1" class="form-check-label">Mozzerella</label>
-          </div>
-          <div class="form-check" class="cheese">
-            <input type="checkbox" class="form-check-input" id="check-2" value="2">
-            <label for="check-2" class="form-check-label">Feta</label>
-          </div>
-          <div class="form-check" class="cheese">
-            <input type="checkbox" class="form-check-input" id="check-3" value="3">
-            <label for="check-3" class="form-check-label">Cheddar</label>
-          </div>
-          <div class="form-check" class="cheese">
-            <input type="checkbox" class="form-check-input" id="check-4" value="4">
-            <label for="check-4" class="form-check-label">Gouda</label>
-          </div>
+        </div> 
+      </div>
+        <div class="row">
+      <div class="col-sm">
+        <label for="size">Choose which size</label>
+        <div class="form-check" class="size">
+          <input type="checkbox" class="form-check-input" id="check-1" value="1">
+          <label for="check-1" class="form-check-label">Small Pizza: 8-10 inches with 6 slices</label>
+        </div>
+        <div class="form-check" class="size">
+          <input type="checkbox" class="form-check-input" id="check-2" value="2">
+          <label for="check-2" class="form-check-label">Medium Pizza: 12 inches with 8 slices</label>
+        </div>
+        <div class="form-check" class="size">
+          <input type="checkbox" class="form-check-input" id="check-3" value="3">
+          <label for="check-3" class="form-check-label">Large Pizza: 14 inch with 10 slices</label>
+        </div>
+        <div class="form-check" class="size">
+          <input type="checkbox" class="form-check-input" id="check-4" value="4">
+          <label for="check-4" class="form-check-label">Extra-large Pizza: 16-18 inch with 12 slices</label>
         </div>
       </div>
-    </form>
-  </div>
-</body>
-</html>
+      
+     
+      <div class="col-sm">
+      <label for="cheese">Choose a type of Cheese</label>
+      <div class="form-check" class="cheese">
+        <input type="checkbox" class="form-check-input" id="check-1" value="1">
+        <label for="check-1" class="form-check-label">Mozzerella</label>
+      </div>
+      <div class="form-check" class="cheese">
+        <input type="checkbox" class="form-check-input" id="check-2" value="2">
+        <label for="check-2" class="form-check-label">Feta</label>
+      </div>
+      <div class="form-check" class="cheese">
+        <input type="checkbox" class="form-check-input" id="check-3" value="3">
+        <label for="check-3" class="form-check-label">Cheddar</label>
+      </div>
+      <div class="form-check" class="cheese">
+        <input type="checkbox" class="form-check-input" id="check-4" value="4">
+        <label for="check-4" class="form-check-label">Gouda</label>
+       </div>
+      </div>
+      <div class="col-sm">
+      <label for="cheese">Choose a dipping sauce</label>
+      <div class="form-check" class="dSauce">
+        <input type="checkbox" class="form-check-input" id="check-1" value="1">
+        <label for="check-1" class="form-check-label">Ranch</label>
+      </div>
+      <div class="form-check" class="dSauce">
+        <input type="checkbox" class="form-check-input" id="check-2" value="2">
+        <label for="check-2" class="form-check-label">Marinara</label>
+      </div>
+      <div class="form-check" class="dSauce">
+        <input type="checkbox" class="form-check-input" id="check-3" value="3">
+        <label for="check-3" class="form-check-label">Garlic Butter</label>
+      </div>
+      <div class="form-check" class="dSauce">
+        <input type="checkbox" class="form-check-input" id="check-4" value="4">
+        <label for="check-4" class="form-check-label">Hot Sauce</label>
+       </div>
+      </div>
+     </div>
+    </div>
+  
+  </body>
+  </html>
