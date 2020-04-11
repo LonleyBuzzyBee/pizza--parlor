@@ -63,10 +63,23 @@ Pizza.prototype.addToppings = function() {
 }
 Pizza.prototype.printCost = function (finalTotal) {
 
-$("#cost").html(finalTotal);
+$("#cost2").html(finalTotal);
 }
+function Classic(classicPizza) {
+  this.classicPizza = classicPizza,
+  this.cost = 0;
+}
+Classic.prototype.addClassic = function () {
+  if (this.classicPizza === "hawaiian"){
+    this.cost = 12.50;
 
+  }
+}
+Classic.prototype.printClassic = function (classicCost) {
+  classicCost.addClassic();
 
+  $("#cost2").html(finalTotal);
+}
 
 
 
@@ -86,8 +99,13 @@ $(document).ready(function() {
 
     pizza.addToppings();
     
+  });
 
- 
+  $("#form1").submit(function(event) {
+    event.preventDefault();
+    var classicPizza = $(".classic").val();
+    var classic = new Classic (classicPizza);
+    console.log(classic);
 
   });
 });
