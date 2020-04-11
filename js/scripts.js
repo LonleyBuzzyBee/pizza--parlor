@@ -66,19 +66,27 @@ Pizza.prototype.printCost = function (finalTotal) {
 $("#cost2").html(finalTotal);
 }
 function Classic(classicPizza) {
-  this.classicPizza = classicPizza,
+  this.classicPizza = classicPizza;
   this.cost = 0;
 }
 Classic.prototype.addClassic = function () {
   if (this.classicPizza === "hawaiian"){
-    this.cost = 12.50;
-
+    return this.printClassic(this.cost = 12.50);
+  }else if (this.classicPizza === "peperoni"){
+    return this.printClassic(this.cost = 11);
+  }else if (this.classicPizza === "fourCheese"){
+    return this.printClassic(this.cost = 13);
+  }else if (this.classicPizza === "buffaloChicken") {
+    return this.printClassic(this.cost = 14);
+  }else{
+    return this.printClassic(this.cost);
   }
-}
-Classic.prototype.printClassic = function (classicCost) {
-  classicCost.addClassic();
 
-  $("#cost2").html(finalTotal);
+}
+Classic.prototype.printClassic = function () {
+  // classicCost.addClassic();
+
+  $("#cost1").html(this.cost);
 }
 
 
@@ -106,6 +114,7 @@ $(document).ready(function() {
     var classicPizza = $(".classic").val();
     var classic = new Classic (classicPizza);
     console.log(classic);
+    classic.addClassic();
 
   });
 });
