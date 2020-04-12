@@ -58,7 +58,6 @@ function Pizza(vTopping,mTopping,sTopping,pSize,cTopping,dSauce) {
 }
 Pizza.prototype.addToppings = function() {
   var total = this.cost + this.vTopping + this.sTopping + this.pSize + this.cTopping + this.dSauce;
-  console.log(total);
   return this.printCost(total);
 }
 Pizza.prototype.printCost = function (finalTotal) {
@@ -84,7 +83,6 @@ Classic.prototype.addClassic = function () {
 
 }
 Classic.prototype.printClassic = function () {
-  // classicCost.addClassic();
 
   $("#cost1").html(this.cost);
 }
@@ -113,7 +111,6 @@ $(document).ready(function() {
     event.preventDefault();
     var classicPizza = $(".classic").val();
     var classic = new Classic (classicPizza);
-    console.log(classic);
     classic.addClassic();
 
   });
