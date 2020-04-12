@@ -1,0 +1,26 @@
+body {
+  background-color: #f9fad4;
+}
+.container {
+  padding: 10px;
+}
+.cont1 {
+  background-image: linear-gradient(#cbdaf2, #dce7fa,#ebf0fa,#f5f6f7);
+}
+
+.cont2 {
+  text-align: center;
+}
+.card1 {
+  width: 25%;
+  height: 25%;
+  display: block;
+  padding: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

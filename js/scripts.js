@@ -71,7 +71,7 @@ function Classic(classicPizza) {
 }
 Classic.prototype.addClassic = function () {
   if (this.classicPizza === "hawaiian"){
-    return this.printClassic(this.cost = 12.50);
+    return this.printClassic(this.cost = 12);
   }else if (this.classicPizza === "peperoni"){
     return this.printClassic(this.cost = 11);
   }else if (this.classicPizza === "fourCheese"){
